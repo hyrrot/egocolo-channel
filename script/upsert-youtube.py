@@ -74,7 +74,8 @@ def get_authenticated_service():
         with open(credentials_file, "r") as f:
             json_creds = json.load(f)
             credentials = google.oauth2.credentials.Credentials(
-                json_creds["token"],                refresh_token=json_creds["refresh_token"],
+                json_creds["token"],
+                refresh_token=json_creds["refresh_token"],
                 token_uri=json_creds["token_uri"],
                 client_id=json_creds["client_id"],
                 client_secret=json_creds["client_secret"],
