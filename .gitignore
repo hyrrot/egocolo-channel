@@ -1,0 +1,7 @@
+_old/
+build/*
+!build/.keep
+src/videos/*
+!src/videos/.keep
+src/sounds/*
+!src/sounds/*.metadata.txt

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "project-i"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+#PyYAML = "^6.0"
+#requests = "^2.28.0"
+google-auth = "^2.8.0"
+google-auth-oauthlib = "^0.5.2"
+httplib2 = "^0.20.4"
+google-api-python-client = "^2.51.0"
+"ruamel.yaml" = "^0.17.21"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
