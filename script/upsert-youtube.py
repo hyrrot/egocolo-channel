@@ -175,7 +175,8 @@ def update_video(youtube, video_id, video_metadata):
             part="snippet",
             body=dict(id=video_id, snippet=video_metadata["video"]["snippet"]),
         )
-        .execute()    )
+        .execute()
+    )
 
 
 def read_author_config_yaml(author_config_yaml_filename):
