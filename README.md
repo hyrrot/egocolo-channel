@@ -16,10 +16,14 @@ Automated management script for [Egocolo Channel （絵心ちゃんねる）](ht
 ## Usage
 
 ```
+# Encode video
+./bin/author.sh src/videos/day1.mov
+
+# Upload video or update video config
 pyenv install $(cat .python-version)
 poetry install
 export CLIENT_SECRETS_FILE=(path to client-secret.json)
 export CREDENTIALS_FILE=/tmp/creds.json
-poetry run script/upsert-youtube.py <path-to->
+poetry run script/upsert-youtube.py <path-to-yaml>
 ```
 
