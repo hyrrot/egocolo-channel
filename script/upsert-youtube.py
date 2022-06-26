@@ -169,7 +169,7 @@ def resumable_upload(request):
 
 
 def update_video(youtube, video_id, video_metadata):
-    return youtube.videos().update(
+    youtube.videos().update(
         part="snippet",
         body=dict(id=video_id, snippet=video_metadata["video"]["snippet"]),
     ).execute()
@@ -200,8 +200,7 @@ if __name__ == "__main__":
         author_config_yaml["id"] = response["id"]
         write_author_config_yaml(author_config_yaml, author_config_yaml_filename)
     else:
-        response = update_video(youtube, author_config_yaml["id"], author_config_yaml["metadata"])
-        print(response)
+        update_video(youtube, author_config_yaml["id"], author_config_yaml["metadata"])
         print(f"Metadata of video {author_config_yaml['id']} was updated.")
 
     print(
