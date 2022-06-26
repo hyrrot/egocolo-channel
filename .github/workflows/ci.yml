@@ -26,4 +26,4 @@ jobs:
         run: poetry install
 
       - name: Run ci script
-        run: bin/ci.sh --check
+        run: bin/ci.sh test
