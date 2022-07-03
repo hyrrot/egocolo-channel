@@ -37,8 +37,11 @@ INTERMEDIATE_FILE_2=${BUILD_DIR}/${VIDEO_NAME}.intermediate.2.mov
 ffmpeg -i ${INTERMEDIATE_FILE_1} -i ${SOUND_FILE} -c copy -shortest ${INTERMEDIATE_FILE_2}
 
 
+# https://trac.ffmpeg.org/wiki/Encode/YouTube
+# Try upscaling with "-vf scale=iw*2:ih*2:flags=neighbor" option
 ffmpeg -i ${INTERMEDIATE_FILE_2} \
 -movflags +faststart \
+-vf scale=iw*2:ih*2:flags=neighbor \
 -c:v libx264 \
 -profile:v high \
 -level:v 4.0 \
